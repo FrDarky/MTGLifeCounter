@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".twoPlayers.TwoPlayersCounter"
+    android:background="@color/background">
+
+    <!--Guidelines-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_2P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <!--Player separation-->
+    <View
+        android:layout_width="3px"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="@id/guideline_2P"
+        app:layout_constraintTop_toBottomOf="parent"
+        />
+
+
+    <!--Text values-->
+
+    <!--PLAYER 1-->
+    <TextView
+        android:id="@+id/twoPlayerParams_p1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/player1"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_2P"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/twoPlayerParams_p1Life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textSize="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_2P"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--PLAYER 2-->
+    <TextView
+        android:id="@+id/twoPlayerParams_p2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player2"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_2P"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/twoPlayerParams_p2Life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textSize="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_2P"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Life buttons-->
+    <!--PLAYER 1-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:weightSum="100"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline_2P"
+        app:layout_constraintTop_toBottomOf="@id/twoPlayerParams_p1Name"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/twoPlayers_p1Minus"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/twoPlayers_p1Plus"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--PLAYER 2-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:weightSum="100"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_2P"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/twoPlayers_p2Minus"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/twoPlayers_p2Plus"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--COIN / DICE BUTTON-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coinFlip_DiceRoll"
+        android:onClick="coinFlipDiceRoll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

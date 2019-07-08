@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#DDDDDD</color>
+    <color name="accept">#228822</color>
+
+    <!--Mana colors-->
+    <color name="white">#FFFBD5</color>
+    <color name="blue">#AAE0FA</color>
+    <color name="black">#CBC2BF</color>
+    <color name="red">#F9AA8F</color>
+    <color name="green">#9BD3AE</color>
+    <color name="multicolor">#D4B676</color>
+    <color name="colorless">#CCC2C0</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+</resources>

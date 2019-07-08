@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:src="@drawable/main_menu_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
+
+    <Button
+        android:id="@+id/onePlayer"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_weight="5"
+        android:text="@string/one_player"
+        android:textSize="20dp"
+        android:onClick="onePlayerSelect"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
+
+    <Button
+        android:id="@+id/twoPlayers"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_weight="5"
+        android:text="@string/two_players"
+        android:textSize="20dp"
+        android:onClick="twoPlayersSelect"
+        android:layout_gravity="center" />
+
+
+</LinearLayout>
